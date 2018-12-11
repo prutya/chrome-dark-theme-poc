@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "My chrome extension",
+  "version": "0.0.1",
+  "description": "Just playing around",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/inject.js"
+      ]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "src/css/*.css",
+    "src/app.js"
+  ]
+}
